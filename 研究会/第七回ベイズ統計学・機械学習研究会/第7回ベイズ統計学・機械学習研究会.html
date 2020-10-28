@@ -474,12 +474,12 @@ summary {
 <p>dplyr/tidyrはデータの加工を得意とするパッケージです。</p>
 <p>tidyverse内に含まれているため、一括でロード可能です。</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## -- Attaching packages ------------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## -- Attaching packages ---------- tidyverse 1.3.0 --</code></pre>
 <pre><code>## √ ggplot2 3.3.2     √ purrr   0.3.4
 ## √ tibble  3.0.3     √ dplyr   1.0.2
 ## √ tidyr   1.1.2     √ stringr 1.4.0
 ## √ readr   1.3.1     √ forcats 0.5.0</code></pre>
-<pre><code>## -- Conflicts ---------------------------------------------------------------------- tidyverse_conflicts() --
+<pre><code>## -- Conflicts ------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 </div>
@@ -505,6 +505,7 @@ summary {
 stringsAsFactors = FALSE
 )
 view(scores_messy)</code></pre>
+<p>先ほど縦長にしたデータを元に戻してみましょう</p>
 </div>
 </div>
 <div id="dplyrでできる事" class="section level2">
@@ -521,8 +522,12 @@ view(scores_messy)</code></pre>
 <div id="やってみよう-1" class="section level3">
 <h3>やってみよう</h3>
 <p>下のmpgというデータセットを読み込み</p>
-<p>松村ほか（2018）「RユーザのためのRStudio［実践］入門」第3章p196などを参考に</p>
-<p>manufacturer、model、displの3列を抜き出してみましょう</p>
+<p>松村ほか（2018）「RユーザのためのRStudio［実践］入門」第3章p183,p191,p196,p211あたりなどを参考に</p>
+<ul>
+<li><p>manufacturer、model、displの3列を抜き出してみましょう</p></li>
+<li><p>無加工のmpgデータセットに対してmanufacturer列が“audi”という条件を満たす行だけに絞り込んでみましょう</p></li>
+<li><p>無加工のmpgデータセットに対してmanufacturer列が“audi”以外である行に絞り込んでみましょう</p></li>
+</ul>
 <pre class="r"><code>mpg</code></pre>
 <pre><code>## # A tibble: 234 x 11
 ##    manufacturer model    displ  year   cyl trans   drv     cty   hwy fl    class
@@ -557,7 +562,10 @@ sum(a)</code></pre>
 <div id="やってみよう-2" class="section level2">
 <h2>やってみよう</h2>
 <p>松村ほか（2018）「RユーザのためのRStudio［実践］入門」第3章p181などを参考に</p>
-<p>いままで行った処理をパイプを使って表現してみましょう</p>
+<ul>
+<li><p>いままで行った処理をパイプを使って表現してみましょう</p></li>
+<li><p>mpgデータセットをmanufacturerごとにグループ化し、それぞれのグループのcityの平均を求めてみましょう。</p></li>
+</ul>
 </div>
 <div id="参考になるサイト" class="section level2">
 <h2>参考になるサイト</h2>
